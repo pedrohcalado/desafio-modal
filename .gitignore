@@ -154,7 +154,7 @@ Dependencies/
 ### SwiftPM ###
 Packages
 xcuserdata
-*.xcodeproj
+# *.xcodeproj
 
 
 ### Xcode ###
