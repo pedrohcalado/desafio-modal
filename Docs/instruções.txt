@@ -1,0 +1,15 @@
+Olá pessoal, boa tarde!
+
+Como falamos, segue em anexo o zip contendo as informações referentes ao teste de iOS fornecido pelo pessoal de iOS do Modal.
+
+Não se desesperem! Tratem esse desafio como qualquer outro da formação. :)
+
+Se tiverem mais dúvidas, podem mandar no slack, ou vamos falar amanhã na nossa daily.
+
+Abs,
+
+Eduardo Bueno
+Líder Técnico/Mentor
+Vaivoa - Academia de Excelência em Tecnologia
+(11) 9 9351-9154
+vaivoa.com
