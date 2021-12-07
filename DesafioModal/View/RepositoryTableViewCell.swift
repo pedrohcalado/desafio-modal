@@ -8,6 +8,7 @@
 import UIKit
 
 class RepositoryTableViewCell: UITableViewCell {
+    @IBOutlet var name: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

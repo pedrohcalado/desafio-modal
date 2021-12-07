@@ -15,9 +15,9 @@
 		80F85C8B275E55EE00F0FB95 /* DesafioModalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C8A275E55EE00F0FB95 /* DesafioModalUITests.swift */; };
 		80F85CD2275FA2ED00F0FB95 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CD1275FA2ED00F0FB95 /* Repository.swift */; };
 		80F85CD8275FA43300F0FB95 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CD7275FA43300F0FB95 /* GithubService.swift */; };
-		C114AAC7275FE0DB002B4F9C /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114AAC6275FE0DB002B4F9C /* GithubResponse.swift */; };
 		80F85CE2275FD38D00F0FB95 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CE0275FD38D00F0FB95 /* RepositoryTableViewCell.swift */; };
 		80F85CE3275FD38D00F0FB95 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F85CE1275FD38D00F0FB95 /* RepositoryTableViewCell.xib */; };
+		C114AAC7275FE0DB002B4F9C /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114AAC6275FE0DB002B4F9C /* GithubResponse.swift */; };
 		EB5F6D42275E864C007D1FBF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */; };
 		EB5F6D46275E9B90007D1FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D45275E9B90007D1FBF /* SceneDelegate.swift */; };
 		EB5F6D48275EA848007D1FBF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D47275EA848007D1FBF /* Coordinator.swift */; };
@@ -55,9 +55,9 @@
 		80F85C8C275E55EE00F0FB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F85CD1275FA2ED00F0FB95 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		80F85CD7275FA43300F0FB95 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
-		C114AAC6275FE0DB002B4F9C /* GithubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubResponse.swift; sourceTree = "<group>"; };
 		80F85CE0275FD38D00F0FB95 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		80F85CE1275FD38D00F0FB95 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		C114AAC6275FE0DB002B4F9C /* GithubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubResponse.swift; sourceTree = "<group>"; };
 		EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		EB5F6D45275E9B90007D1FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB5F6D47275EA848007D1FBF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
