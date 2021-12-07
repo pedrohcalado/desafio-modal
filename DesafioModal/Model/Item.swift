@@ -10,12 +10,11 @@
 import Foundation
 
 struct Item: Codable {
-    let name: String?
-    let full_name: String?
-    let created_at: String? // AQUI ERA DATE?
-    let stargazers_count: Int?
-    let watchers_count: Int?
-    let forks_count: Int?
-    let avatar_url: String?
+    let name: String
+    let full_name: String
+    let created_at: String
+    let stargazers_count: Int
+    let watchers_count: Int
+    let forks_count: Int
     let description: String?
 }

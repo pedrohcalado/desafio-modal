@@ -34,10 +34,6 @@ class GithubService {
         if let url = components.url {
             if let data = try? Data(contentsOf: url) {
                 let decoder = JSONDecoder()
-                /*
-                if let json = try? decoder.decode(GithubResponse.self, from: data) {
-                    handler(json)
-                }*/
                 do {
                     let json = try decoder.decode(GithubResponse.self, from: data)
                     handler(json)
@@ -46,9 +42,7 @@ class GithubService {
                 }
             }
         }
-
     }
-
 }
 
 enum githubSort: String {
