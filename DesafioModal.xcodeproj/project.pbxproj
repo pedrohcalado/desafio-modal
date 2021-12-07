@@ -13,6 +13,9 @@
 		80F85C75275E55EE00F0FB95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F85C73275E55EE00F0FB95 /* LaunchScreen.storyboard */; };
 		80F85C80275E55EE00F0FB95 /* DesafioModalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C7F275E55EE00F0FB95 /* DesafioModalTests.swift */; };
 		80F85C8B275E55EE00F0FB95 /* DesafioModalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C8A275E55EE00F0FB95 /* DesafioModalUITests.swift */; };
+		80F85CCD275FA15300F0FB95 /* GitHubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CCC275FA15300F0FB95 /* GitHubResponse.swift */; };
+		80F85CD2275FA2ED00F0FB95 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CD1275FA2ED00F0FB95 /* Item.swift */; };
+		80F85CD8275FA43300F0FB95 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CD7275FA43300F0FB95 /* GithubService.swift */; };
 		EB5F6D42275E864C007D1FBF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */; };
 		EB5F6D46275E9B90007D1FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D45275E9B90007D1FBF /* SceneDelegate.swift */; };
 		EB5F6D48275EA848007D1FBF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D47275EA848007D1FBF /* Coordinator.swift */; };
@@ -48,6 +51,9 @@
 		80F85C86275E55EE00F0FB95 /* DesafioModalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioModalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F85C8A275E55EE00F0FB95 /* DesafioModalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioModalUITests.swift; sourceTree = "<group>"; };
 		80F85C8C275E55EE00F0FB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80F85CCC275FA15300F0FB95 /* GitHubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GitHubResponse.swift; path = ../../../../../../.ssh/GitHubResponse.swift; sourceTree = "<group>"; };
+		80F85CD1275FA2ED00F0FB95 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		80F85CD7275FA43300F0FB95 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		EB5F6D45275E9B90007D1FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB5F6D47275EA848007D1FBF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		80F85C67275E55ED00F0FB95 /* DesafioModal */ = {
 			isa = PBXGroup;
 			children = (
+				80F85CD6275FA42500F0FB95 /* Service */,
 				EB5F6D3D275E853E007D1FBF /* Model */,
 				EB5F6D3F275E8554007D1FBF /* View */,
 				EB5F6D40275E855B007D1FBF /* ViewModel */,
@@ -132,9 +139,19 @@
 			path = DesafioModalUITests;
 			sourceTree = "<group>";
 		};
+		80F85CD6275FA42500F0FB95 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				80F85CD7275FA43300F0FB95 /* GithubService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		EB5F6D3D275E853E007D1FBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				80F85CCC275FA15300F0FB95 /* GitHubResponse.swift */,
+				80F85CD1275FA2ED00F0FB95 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,7 +333,10 @@
 			files = (
 				80F85C6D275E55ED00F0FB95 /* ViewController.swift in Sources */,
 				EB5F6D42275E864C007D1FBF /* MainCoordinator.swift in Sources */,
+				80F85CD8275FA43300F0FB95 /* GithubService.swift in Sources */,
 				EB5F6D48275EA848007D1FBF /* Coordinator.swift in Sources */,
+				80F85CCD275FA15300F0FB95 /* GitHubResponse.swift in Sources */,
+				80F85CD2275FA2ED00F0FB95 /* Item.swift in Sources */,
 				80F85C69275E55ED00F0FB95 /* AppDelegate.swift in Sources */,
 				EB5F6D46275E9B90007D1FBF /* SceneDelegate.swift in Sources */,
 			);

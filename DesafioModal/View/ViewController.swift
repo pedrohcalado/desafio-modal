@@ -13,6 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
 
+        let queque = "java"
+        GithubService.shared.getRepositories(query: queque) { response in
+            debugPrint(response)
+        }
+
     }
 
 }
