@@ -11,7 +11,7 @@ import UIKit
 class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
 
-    var viewController = ViewController()
+    var viewController = RepositoriesViewController()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

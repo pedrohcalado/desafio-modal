@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E5AE6532760F11A008F6763 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE6512760F11A008F6763 /* RepositoriesViewController.swift */; };
 		4E5AE6542760F11A008F6763 /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5AE6522760F11A008F6763 /* RepositoriesViewController.xib */; };
+		4E5AE65727613F36008F6763 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE65627613F36008F6763 /* Utils.swift */; };
 		80F85C69275E55ED00F0FB95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C68275E55ED00F0FB95 /* AppDelegate.swift */; };
 		80F85C6D275E55ED00F0FB95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C6C275E55ED00F0FB95 /* ViewController.swift */; };
 		80F85C72275E55EE00F0FB95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F85C71275E55EE00F0FB95 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		4E5AE6512760F11A008F6763 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		4E5AE6522760F11A008F6763 /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
+		4E5AE65627613F36008F6763 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		80F85C65275E55ED00F0FB95 /* DesafioModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F85C68275E55ED00F0FB95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80F85C6C275E55ED00F0FB95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E5AE65527613F21008F6763 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E5AE65627613F36008F6763 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		80F85C5C275E55ED00F0FB95 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		80F85C67275E55ED00F0FB95 /* DesafioModal */ = {
 			isa = PBXGroup;
 			children = (
+				4E5AE65527613F21008F6763 /* Utils */,
 				80F85CD6275FA42500F0FB95 /* Service */,
 				EB5F6D3D275E853E007D1FBF /* Model */,
 				EB5F6D3F275E8554007D1FBF /* View */,
@@ -352,6 +363,7 @@
 				80F85CD8275FA43300F0FB95 /* GithubService.swift in Sources */,
 				EB5F6D48275EA848007D1FBF /* Coordinator.swift in Sources */,
 				4E5AE6532760F11A008F6763 /* RepositoriesViewController.swift in Sources */,
+				4E5AE65727613F36008F6763 /* Utils.swift in Sources */,
 				80F85CD2275FA2ED00F0FB95 /* Repository.swift in Sources */,
 				80F85C69275E55ED00F0FB95 /* AppDelegate.swift in Sources */,
 				EB5F6D46275E9B90007D1FBF /* SceneDelegate.swift in Sources */,
