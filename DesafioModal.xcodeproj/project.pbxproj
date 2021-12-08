@@ -18,6 +18,8 @@
 		80F85CE2275FD38D00F0FB95 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85CE0275FD38D00F0FB95 /* RepositoryTableViewCell.swift */; };
 		80F85CE3275FD38D00F0FB95 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F85CE1275FD38D00F0FB95 /* RepositoryTableViewCell.xib */; };
 		C114AAC7275FE0DB002B4F9C /* FetchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114AAC6275FE0DB002B4F9C /* FetchRepositoriesResponse.swift */; };
+		C166A128276128D40059D459 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166A126276128D40059D459 /* FilterViewController.swift */; };
+		C166A129276128D40059D459 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C166A127276128D40059D459 /* FilterViewController.xib */; };
 		C1E723AD2760E919000475E4 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723AC2760E919000475E4 /* Commit.swift */; };
 		C1E723AF2760F8A0000475E4 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723AE2760F8A0000475E4 /* Branch.swift */; };
 		C1E723B12760F8ED000475E4 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723B02760F8ED000475E4 /* Contributor.swift */; };
@@ -62,6 +64,8 @@
 		80F85CE0275FD38D00F0FB95 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		80F85CE1275FD38D00F0FB95 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		C114AAC6275FE0DB002B4F9C /* FetchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRepositoriesResponse.swift; sourceTree = "<group>"; };
+		C166A126276128D40059D459 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		C166A127276128D40059D459 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		C1E723AC2760E919000475E4 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		C1E723AE2760F8A0000475E4 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		C1E723B02760F8ED000475E4 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				80F85C6C275E55ED00F0FB95 /* ViewController.swift */,
 				80F85CE0275FD38D00F0FB95 /* RepositoryTableViewCell.swift */,
 				80F85CE1275FD38D00F0FB95 /* RepositoryTableViewCell.xib */,
+				C166A126276128D40059D459 /* FilterViewController.swift */,
+				C166A127276128D40059D459 /* FilterViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			files = (
 				80F85CE3275FD38D00F0FB95 /* RepositoryTableViewCell.xib in Resources */,
 				80F85C75275E55EE00F0FB95 /* LaunchScreen.storyboard in Resources */,
+				C166A129276128D40059D459 /* FilterViewController.xib in Resources */,
 				80F85C72275E55EE00F0FB95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C166A128276128D40059D459 /* FilterViewController.swift in Sources */,
 				C1E723AD2760E919000475E4 /* Commit.swift in Sources */,
 				80F85CE2275FD38D00F0FB95 /* RepositoryTableViewCell.swift in Sources */,
 				80F85C6D275E55ED00F0FB95 /* ViewController.swift in Sources */,
