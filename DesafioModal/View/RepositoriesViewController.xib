@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +13,7 @@
             <connections>
                 <outlet property="filterNames" destination="aUr-sF-2WU" id="zbe-eg-Z0U"/>
                 <outlet property="numbersOfFilters" destination="aKo-xo-d8i" id="slE-8f-ZYq"/>
+                <outlet property="tableView" destination="fPR-mC-uzp" id="DyA-fB-axH"/>
                 <outlet property="view" destination="9mk-Xf-KBM" id="MnH-uL-Vdh"/>
             </connections>
         </placeholder>
@@ -22,7 +24,19 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-sd-Ldh" userLabel="LISTAGEM">
                     <rect key="frame" x="0.0" y="206" width="428" height="654"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fPR-mC-uzp">
+                            <rect key="frame" x="0.0" y="158" width="428" height="496"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fPR-mC-uzp" secondAttribute="trailing" id="562-N2-Ul6"/>
+                        <constraint firstItem="fPR-mC-uzp" firstAttribute="leading" secondItem="bDq-sd-Ldh" secondAttribute="leading" id="9F6-Ud-fcj"/>
+                        <constraint firstItem="fPR-mC-uzp" firstAttribute="top" secondItem="bDq-sd-Ldh" secondAttribute="top" constant="158" id="Q3g-vi-MWJ"/>
+                        <constraint firstAttribute="bottom" secondItem="fPR-mC-uzp" secondAttribute="bottom" id="zkb-wo-lgt"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSF-bo-xgW" userLabel="GITHUB">
                     <rect key="frame" x="0.0" y="98" width="428" height="54"/>

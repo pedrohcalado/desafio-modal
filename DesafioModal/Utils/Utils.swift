@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-func InitialConfig (numbersOfFilters: UILabel!, filterNames: UIView!) {
+func initialConfig (numbersOfFilters: UILabel!, filterNames: UIView!) {
     numbersOfFilters?.layer.masksToBounds = true
     numbersOfFilters.layer.cornerRadius = 8
     filterNames.clipsToBounds = true

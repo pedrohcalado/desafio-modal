@@ -16,7 +16,7 @@ class RepositoryTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .red
+        backgroundColor = UIColor(red: 235 / 255, green: 236 / 255, blue: 238 / 255, alpha: 1.0)
     }
     override func layoutSubviews() {
         super.layoutSubviews()
