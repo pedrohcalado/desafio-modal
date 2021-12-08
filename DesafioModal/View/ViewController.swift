@@ -14,11 +14,11 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-
+        
         tableView.register(UINib(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
         let service = GithubService()
 
-        service.searchRepositories(query: "javascript") { [weak self] result in
+        service.searchRepositories(query: "q") { [weak self] result in
             switch result {
             case .success(let result):
                 debugPrint(result.items)
