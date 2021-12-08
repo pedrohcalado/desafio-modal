@@ -21,7 +21,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         tableView.register(UINib(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
         let service = GithubService()
 
-        service.searchRepositories(query: "q") { [weak self] result in
+        service.searchRepositories(query: "F") { [weak self] result in
             switch result {
             case .success(let result):
                 debugPrint(result.items)
@@ -47,8 +47,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath) as? RepositoryTableViewCell {
             if let result = result {
-                cell.name.text = result[indexPath.row].name
-
+                cell.setData(repo: result[indexPath.row])
                 if !indexPath.row.isMultiple(of: 2) {
                     cell.invertTheme()
                 }

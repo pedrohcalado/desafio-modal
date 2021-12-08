@@ -11,7 +11,6 @@
 		4E5AE6542760F11A008F6763 /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5AE6522760F11A008F6763 /* RepositoriesViewController.xib */; };
 		4E5AE65727613F36008F6763 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE65627613F36008F6763 /* Utils.swift */; };
 		80F85C69275E55ED00F0FB95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C68275E55ED00F0FB95 /* AppDelegate.swift */; };
-		80F85C6D275E55ED00F0FB95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C6C275E55ED00F0FB95 /* ViewController.swift */; };
 		80F85C72275E55EE00F0FB95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F85C71275E55EE00F0FB95 /* Assets.xcassets */; };
 		80F85C75275E55EE00F0FB95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F85C73275E55EE00F0FB95 /* LaunchScreen.storyboard */; };
 		80F85C80275E55EE00F0FB95 /* DesafioModalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F85C7F275E55EE00F0FB95 /* DesafioModalTests.swift */; };
@@ -49,7 +48,6 @@
 		4E5AE65627613F36008F6763 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		80F85C65275E55ED00F0FB95 /* DesafioModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F85C68275E55ED00F0FB95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80F85C6C275E55ED00F0FB95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80F85C71275E55EE00F0FB95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80F85C74275E55EE00F0FB95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80F85C76275E55EE00F0FB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		EB5F6D3F275E8554007D1FBF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				80F85C6C275E55ED00F0FB95 /* ViewController.swift */,
 				4E5AE6512760F11A008F6763 /* RepositoriesViewController.swift */,
 				4E5AE6522760F11A008F6763 /* RepositoriesViewController.xib */,
 				80F85CE0275FD38D00F0FB95 /* RepositoryTableViewCell.swift */,
@@ -357,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80F85CE2275FD38D00F0FB95 /* RepositoryTableViewCell.swift in Sources */,
-				80F85C6D275E55ED00F0FB95 /* ViewController.swift in Sources */,
 				C114AAC7275FE0DB002B4F9C /* GithubResponse.swift in Sources */,
 				EB5F6D42275E864C007D1FBF /* MainCoordinator.swift in Sources */,
 				80F85CD8275FA43300F0FB95 /* GithubService.swift in Sources */,

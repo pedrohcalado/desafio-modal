@@ -11,6 +11,11 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet var name: UILabel!
     @IBOutlet var starsLabel: UILabel!
     @IBOutlet var starsNumber: UILabel!
+
+    @IBOutlet var watchersNumber: UILabel!
+    @IBOutlet var forksNumber: UILabel!
+    @IBOutlet var daysAgo: UILabel!
+
     @IBOutlet var topRectangle: UIView!
     @IBOutlet var bottomRectangle: UIView!
 
@@ -36,4 +41,20 @@ class RepositoryTableViewCell: UITableViewCell {
         self.bottomRectangle.backgroundColor = .gray
     }
 
+    func setData(repo: Repository) {
+        self.name.text = repo.name
+        self.starsNumber.text = String(repo.stargazersCount)
+        self.watchersNumber.text = String(repo.watchersCount)
+        self.forksNumber.text = String(repo.forksCount)
+        self.daysAgo.text = "\(formatDate(date: repo.createdAt)) dias"
+    }
+
+    func formatDate(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: date)!
+        let days = Calendar.current.dateComponents([.day], from: date, to: Date())
+        return String(days.day!)
+    }
 }

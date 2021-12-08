@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +26,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg3-0p-fq3" userLabel="View1">
                                         <rect key="frame" x="24" y="16" width="50" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seguidores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ3-PW-rR9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watchers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ3-PW-rR9">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="78R-xT-RNx"/>
@@ -62,7 +61,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbB-XR-xbx" userLabel="View2">
                                         <rect key="frame" x="119" y="16" width="50" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seguidores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pby-V0-F2g">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pby-V0-F2g">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="0P6-uM-zIP"/>
@@ -111,7 +110,7 @@
                                                 <rect key="frame" x="0.0" y="14" width="50" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="clB-Dy-ZXd"/>
-                                                    <constraint firstAttribute="width" constant="50" id="gY6-Ax-VZN"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="gY6-Ax-VZN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +120,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gbv-JE-x2r" firstAttribute="top" secondItem="Wwh-qe-Zqg" secondAttribute="top" id="CCl-XF-ogc"/>
-                                            <constraint firstAttribute="width" constant="50" id="SnO-Oj-VfK"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="SnO-Oj-VfK"/>
                                             <constraint firstItem="erf-u9-bUU" firstAttribute="leading" secondItem="Wwh-qe-Zqg" secondAttribute="leading" id="XVw-ob-apW"/>
                                             <constraint firstAttribute="trailing" secondItem="erf-u9-bUU" secondAttribute="trailing" id="XiG-VQ-APd"/>
                                             <constraint firstItem="gbv-JE-x2r" firstAttribute="leading" secondItem="Wwh-qe-Zqg" secondAttribute="leading" id="YNc-z0-CJ1"/>
@@ -212,10 +211,13 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bottomRectangle" destination="dMj-sF-2Ih" id="xiM-oH-Wt8"/>
+                <outlet property="daysAgo" destination="erf-u9-bUU" id="jvr-6y-gjT"/>
+                <outlet property="forksNumber" destination="9lf-wx-C0c" id="LG3-kz-TV7"/>
                 <outlet property="name" destination="415-OL-n3w" id="TbG-kN-hGW"/>
                 <outlet property="starsLabel" destination="Eie-rB-5zN" id="cbg-Fk-JfQ"/>
                 <outlet property="starsNumber" destination="fea-Gy-LUE" id="pJF-3l-Bpp"/>
                 <outlet property="topRectangle" destination="h7T-MF-45r" id="74N-mb-Ih7"/>
+                <outlet property="watchersNumber" destination="Opt-wF-Bdt" id="O0s-MN-3tg"/>
             </connections>
             <point key="canvasLocation" x="-113.768115942029" y="40.513392857142854"/>
         </tableViewCell>
