@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -144,7 +143,6 @@
                                     <constraint firstAttribute="height" constant="62" id="bh2-bJ-XGe"/>
                                     <constraint firstItem="hg3-0p-fq3" firstAttribute="leading" secondItem="dMj-sF-2Ih" secondAttribute="leading" constant="24" id="kpE-2s-o4J"/>
                                     <constraint firstItem="xbB-XR-xbx" firstAttribute="leading" secondItem="dMj-sF-2Ih" secondAttribute="leading" constant="119" id="kuY-uT-J8C"/>
-                                    <constraint firstAttribute="width" constant="359" id="ya1-PY-hc2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-xc-ubK" userLabel="View4">
@@ -195,6 +193,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.14120471479999999" green="0.1450904012" blue="0.15682715180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="dMj-sF-2Ih" firstAttribute="centerX" secondItem="h7T-MF-45r" secondAttribute="centerX" id="2S5-9P-Exw"/>
                             <constraint firstItem="dMj-sF-2Ih" firstAttribute="leading" secondItem="h7T-MF-45r" secondAttribute="leading" id="4yV-CH-IAA"/>
                             <constraint firstItem="xfz-xc-ubK" firstAttribute="leading" secondItem="h7T-MF-45r" secondAttribute="leading" constant="263" id="Jw4-qH-oVf"/>
                             <constraint firstItem="dMj-sF-2Ih" firstAttribute="top" secondItem="h7T-MF-45r" secondAttribute="top" constant="93" id="PyW-kB-at9"/>
@@ -215,7 +214,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bottomRectangle" destination="dMj-sF-2Ih" id="xiM-oH-Wt8"/>
                 <outlet property="name" destination="415-OL-n3w" id="TbG-kN-hGW"/>
+                <outlet property="starsLabel" destination="Eie-rB-5zN" id="cbg-Fk-JfQ"/>
+                <outlet property="starsNumber" destination="fea-Gy-LUE" id="pJF-3l-Bpp"/>
+                <outlet property="topRectangle" destination="h7T-MF-45r" id="74N-mb-Ih7"/>
             </connections>
             <point key="canvasLocation" x="-113.768115942029" y="40.513392857142854"/>
         </tableViewCell>

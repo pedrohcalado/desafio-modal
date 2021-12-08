@@ -46,6 +46,9 @@ class ViewController: UITableViewController {
             if let result = result {
                 cell.name.text = result[indexPath.row].name
 
+                if !indexPath.row.isMultiple(of: 2) {
+                    cell.invertTheme()
+                }
             }
             return cell
         }
