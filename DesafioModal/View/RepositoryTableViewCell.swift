@@ -75,4 +75,5 @@ class RepositoryTableViewCell: UITableViewCell {
         let days = Calendar.current.dateComponents([.day], from: date, to: Date())
         return days.day!
     }
+     
 }
