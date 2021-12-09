@@ -10,7 +10,6 @@ class FilterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     /*
     // MARK: - Navigation
 
@@ -20,11 +19,10 @@ class FilterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
+
     @IBAction func applyFilterTapped(_ sender: UIButton) {
     }
-    
+
     @IBAction func clearFiltersTapped(_ sender: UIButton) {
     }
 }

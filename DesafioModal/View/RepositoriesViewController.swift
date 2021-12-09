@@ -32,7 +32,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         service.searchRepositories(query: "A") { [weak self] result in
             switch result {
             case .success(let result):
-                self?.result = result.items
+                self?.result = result.repositories
                 self?.tableView.reloadData()
 
             case .error(let message):
@@ -78,7 +78,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         service.searchRepositories(query: filterByName ?? "") { [weak self] result in
             switch result {
             case .success(let result):
-                self?.result = result.items
+                self?.result = result.repositories
                 self?.tableView.reloadData()
 
             case .error(let message):
@@ -96,7 +96,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         service.searchRepositories(query: textField.text ?? "") { [weak self] result in
             switch result {
             case .success(let result):
-                self?.result = result.items
+                self?.result = result.repositories
                 self?.tableView.reloadData()
 
             case .error(let message):

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
             case .success(let result):
                 let repositories = result.repositories
 
-                repositories.forEach { repository in
+                repositories.forEach { _ in
 //                    service.getBranchesOf(repository) { result in
 //                        debugPrint(result)
 //                    }

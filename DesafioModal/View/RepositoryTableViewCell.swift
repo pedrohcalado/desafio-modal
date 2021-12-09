@@ -54,7 +54,7 @@ class RepositoryTableViewCell: UITableViewCell {
     }
 
     func setData(repository: Repository) {
-        self.owner.text = repository.full_name
+        self.owner.text = repository.fullName
         self.name.text = repository.name
 
         let numberFormatter = NumberFormatter()

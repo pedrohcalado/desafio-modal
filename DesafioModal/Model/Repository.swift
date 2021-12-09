@@ -35,7 +35,7 @@ public struct Repository: Decodable {
         watchersCount = try values.decode(Int.self, forKey: .watchersCount)
         forksCount = try values.decode(Int.self, forKey: .forksCount)
     }
-    
+
     private static func fullnameFormat(fullName: String) -> String {
         var tempFullName = fullName
         if let dotRange = tempFullName.range(of: "/") {
@@ -43,5 +43,5 @@ public struct Repository: Decodable {
         }
         return tempFullName
     }
-    
+
 }
