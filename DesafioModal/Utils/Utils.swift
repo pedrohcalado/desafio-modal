@@ -8,14 +8,18 @@
 import Foundation
 import UIKit
 
-func initialConfig (numbersOfFilters: UILabel!, filterNames: UIView!) {
+func CornerRounder(numbersOfFilters: UILabel!) {
     numbersOfFilters?.layer.masksToBounds = true
     numbersOfFilters.layer.cornerRadius = 8
-    filterNames.clipsToBounds = true
-    filterNames.layer.cornerRadius = 10
-    filterNames.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+}
+func LowerBlackLine (viewName:  UIView!){
     let bottomLine = CALayer()
-    bottomLine.frame = CGRect(x: 0, y: filterNames.frame.height - 3, width: filterNames.frame.width, height: 3)
+    bottomLine.frame = CGRect(x: 0, y: viewName.frame.height - 3, width: viewName.frame.width, height: 3)
     bottomLine.backgroundColor = UIColor.black.cgColor
-    filterNames.layer.addSublayer(bottomLine)
+    viewName.layer.addSublayer(bottomLine)
+}
+func RoundTop (viewName:  UIView!){
+    viewName.clipsToBounds = true
+    viewName.layer.cornerRadius = 10
+    viewName.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
 }

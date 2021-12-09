@@ -17,7 +17,9 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialConfig(numbersOfFilters: numbersOfFilters, filterNames: filterNames)
+        RoundTop(viewName: filterNames)
+        CornerRounder(numbersOfFilters: numbersOfFilters)
+        LowerBlackLine(viewName: filterNames)
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
