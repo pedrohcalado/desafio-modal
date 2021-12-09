@@ -48,14 +48,17 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath) as? RepositoryTableViewCell {
             if let result = result {
                 cell.setData(repo: result[indexPath.row])
-                if !indexPath.row.isMultiple(of: 2) {
-                    cell.invertTheme()
-                }
             }
+
+            if !indexPath.row.isMultiple(of: 2) {
+                cell.invertTheme()
+            } else {
+                cell.mainTheme()
+            }
+
             return cell
         }
 
         return UITableViewCell()
     }
-
 }

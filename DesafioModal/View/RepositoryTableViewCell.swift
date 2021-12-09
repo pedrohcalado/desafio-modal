@@ -23,6 +23,7 @@ class RepositoryTableViewCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = UIColor(red: 235 / 255, green: 236 / 255, blue: 238 / 255, alpha: 1.0)
     }
+
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 8, bottom: 16, right: 8))
@@ -39,6 +40,14 @@ class RepositoryTableViewCell: UITableViewCell {
         self.starsNumber.textColor = .black
         self.topRectangle.backgroundColor = .white
         self.bottomRectangle.backgroundColor = .gray
+    }
+
+    func mainTheme() {
+        self.name.textColor = .white
+        self.starsLabel.textColor = .white
+        self.starsNumber.textColor = .white
+        self.topRectangle.backgroundColor = UIColor(red: 0.14, green: 0.14, blue: 0.16, alpha: 1.0)
+        self.bottomRectangle.backgroundColor = .black
     }
 
     func setData(repo: Repository) {
