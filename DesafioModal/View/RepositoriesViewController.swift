@@ -7,24 +7,29 @@
 
 import UIKit
 
-class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBOutlet var numbersOfFilters: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filterNames: UIView!
+    @IBOutlet var textField: UITextField!
+
+    var filterByName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initialConfig(numbersOfFilters: numbersOfFilters, filterNames: filterNames)
         tableView.delegate = self
         tableView.dataSource = self
+        textField.delegate = self
+
+        self.hideKeyboardWhenTappedAround()
 
         tableView.register(UINib(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
         let service = GithubService()
 
-        service.searchRepositories(query: "F") { [weak self] result in
+        service.searchRepositories(query: "A") { [weak self] result in
             switch result {
             case .success(let result):
-                debugPrint(result.items)
                 self?.result = result.items
                 self?.tableView.reloadData()
 
@@ -60,5 +65,60 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         }
 
         return UITableViewCell()
+    }
+
+    @IBAction func filterByNameChanged(_ sender: UITextField) {
+        filterByName = sender.text
+    }
+
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        let service = GithubService()
+        service.searchRepositories(query: filterByName ?? "") { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.result = result.items
+                self?.tableView.reloadData()
+
+            case .error(let message):
+                let alert = UIAlertController(title: "Não foi possível realizar essa ação.", message: message, preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+
+                self?.present(alert, animated: true)
+            }
+        }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let service = GithubService()
+        service.searchRepositories(query: textField.text ?? "") { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.result = result.items
+                self?.tableView.reloadData()
+
+            case .error(let message):
+                let alert = UIAlertController(title: "Não foi possível realizar essa ação.", message: message, preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+
+                self?.present(alert, animated: true)
+            }
+        }
+
+        return true
+    }
+
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
