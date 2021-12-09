@@ -47,7 +47,7 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath) as? RepositoryTableViewCell {
             if let result = result {
-                cell.setData(repo: result[indexPath.row])
+                cell.setData(repository: result[indexPath.row])
             }
 
             if !indexPath.row.isMultiple(of: 2) {

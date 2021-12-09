@@ -9,6 +9,7 @@ import UIKit
 
 class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet var name: UILabel!
+    @IBOutlet var owner: UILabel!
     @IBOutlet var starsLabel: UILabel!
     @IBOutlet var starsNumber: UILabel!
 
@@ -35,6 +36,7 @@ class RepositoryTableViewCell: UITableViewCell {
     }
 
     func invertTheme() {
+        self.owner.textColor = .black
         self.name.textColor = .black
         self.starsLabel.textColor = .black
         self.starsNumber.textColor = .black
@@ -43,6 +45,7 @@ class RepositoryTableViewCell: UITableViewCell {
     }
 
     func mainTheme() {
+        self.owner.textColor = .white
         self.name.textColor = .white
         self.starsLabel.textColor = .white
         self.starsNumber.textColor = .white
@@ -50,20 +53,26 @@ class RepositoryTableViewCell: UITableViewCell {
         self.bottomRectangle.backgroundColor = .black
     }
 
-    func setData(repo: Repository) {
-        self.name.text = repo.name
-        self.starsNumber.text = String(repo.stargazersCount)
-        self.watchersNumber.text = String(repo.watchersCount)
-        self.forksNumber.text = String(repo.forksCount)
-        self.daysAgo.text = "\(formatDate(date: repo.createdAt)) dias"
+    func setData(repository: Repository) {
+        self.owner.text = repository.full_name
+        self.name.text = repository.name
+
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.locale = Locale(identifier: "pt_BR")
+
+        self.starsNumber.text = numberFormatter.string(from: NSNumber(value: repository.stargazersCount))
+        self.watchersNumber.text = numberFormatter.string(from: NSNumber(value: repository.watchersCount))
+        self.forksNumber.text = numberFormatter.string(from: NSNumber(value: repository.forksCount))
+        self.daysAgo.text = "\(numberFormatter.string(from: NSNumber(value: formatDate(date: repository.createdAt)))!) dias"
     }
 
-    func formatDate(date: String) -> String {
+    func formatDate(date: String) -> Int {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         let date = dateFormatter.date(from: date)!
         let days = Calendar.current.dateComponents([.day], from: date, to: Date())
-        return String(days.day!)
+        return days.day!
     }
 }
