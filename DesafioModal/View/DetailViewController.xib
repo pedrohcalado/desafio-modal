@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DesafioModal" customModuleProvider="target">
             <connections>
-                <outlet property="RepoView" destination="Bdj-Eg-kmy" id="Qzg-hS-OWs"/>
+                <outlet property="repoView" destination="Bdj-Eg-kmy" id="Qzg-hS-OWs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,10 +20,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnS-a2-WZt" userLabel="TopDetail">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dp-3O-9t3">
-                            <rect key="frame" x="16" y="98" width="359" height="54"/>
+                            <rect key="frame" x="16" y="54" width="359" height="54"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="54" id="fGV-yw-npP"/>
                             </constraints>
@@ -39,10 +38,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-Eg-kmy">
-                    <rect key="frame" x="8" y="162" width="359" height="563"/>
+                    <rect key="frame" x="8" y="118" width="359" height="641"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p86-As-QxE">
-                            <rect key="frame" x="24" y="71.333333333333329" width="36" height="31.666666666666671"/>
+                            <rect key="frame" x="24" y="71" width="36" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="36" id="ahq-90-mnd"/>
                                 <constraint firstAttribute="height" constant="32" id="jjb-6j-Jzs"/>
@@ -215,7 +214,7 @@
                             <rect key="frame" x="180" y="191" width="76" height="32"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colaboradores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-P1-yHB">
-                                    <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="16"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="rMy-Mm-x3c"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="u9W-A3-Ayh"/>
@@ -247,7 +246,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEN-E0-5le" userLabel="Readme View">
-                            <rect key="frame" x="0.0" y="254" width="359" height="294"/>
+                            <rect key="frame" x="0.0" y="254" width="359" height="372"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -277,7 +276,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkV-La-rUM">
-                    <rect key="frame" x="52" y="748" width="270" height="30"/>
+                    <rect key="frame" x="52" y="782" width="270" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Compartilhar">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
