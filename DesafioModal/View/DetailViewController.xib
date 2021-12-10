@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,20 +12,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DesafioModal" customModuleProvider="target">
             <connections>
-                <outlet property="repoView" destination="Bdj-Eg-kmy" id="Qzg-hS-OWs"/>
+                <outlet property="backButton" destination="6dp-3O-9t3" id="25v-gz-Seb"/>
+                <outlet property="branchesLabel" destination="UPq-dK-WiR" id="jGR-1y-Imy"/>
+                <outlet property="colaboratorsLabel" destination="9Wb-Gg-k1G" id="l45-Tm-0r1"/>
+                <outlet property="commitsLabel" destination="zdW-CH-YKw" id="yye-Av-C4P"/>
+                <outlet property="nameLabel" destination="5jj-Uz-zYA" id="LDJ-98-G1y"/>
+                <outlet property="releasesLabel" destination="RZl-eN-O5q" id="2Cr-QW-TeJ"/>
+                <outlet property="repoView" destination="6dp-3O-9t3" id="znR-M5-vNr"/>
+                <outlet property="shareButton" destination="EkV-La-rUM" id="Wg3-Fu-E5n"/>
+                <outlet property="stargazersLabel" destination="1U0-HZ-UCg" id="0og-V5-R4R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnS-a2-WZt" userLabel="TopDetail">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dp-3O-9t3">
-                            <rect key="frame" x="16" y="54" width="359" height="54"/>
+                            <rect key="frame" x="16" y="98" width="398" height="54"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="54" id="fGV-yw-npP"/>
                             </constraints>
@@ -38,7 +48,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-Eg-kmy">
-                    <rect key="frame" x="8" y="118" width="359" height="641"/>
+                    <rect key="frame" x="8" y="162" width="398" height="647"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p86-As-QxE">
                             <rect key="frame" x="24" y="71" width="36" height="32"/>
@@ -58,7 +68,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDz-Us-LXw" userLabel="Estrelas">
-                            <rect key="frame" x="263" y="71" width="72" height="32"/>
+                            <rect key="frame" x="302" y="71" width="72" height="32"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de estrelas" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az7-V5-wh1">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="14"/>
@@ -92,7 +102,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpr-H7-5Lg" userLabel="TracoCima">
-                            <rect key="frame" x="0.0" y="122" width="359" height="1"/>
+                            <rect key="frame" x="0.0" y="122" width="398" height="1"/>
                             <color key="backgroundColor" systemColor="systemGray2Color"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="453-IW-2hC"/>
@@ -169,7 +179,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEK-MM-DFM" userLabel="TracoBaixo">
-                            <rect key="frame" x="0.0" y="237" width="359" height="1"/>
+                            <rect key="frame" x="0.0" y="237" width="398" height="1"/>
                             <color key="backgroundColor" systemColor="systemGray2Color"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="VPU-Pz-f5A"/>
@@ -246,7 +256,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEN-E0-5le" userLabel="Readme View">
-                            <rect key="frame" x="0.0" y="254" width="359" height="372"/>
+                            <rect key="frame" x="0.0" y="254" width="398" height="378"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -276,7 +286,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkV-La-rUM">
-                    <rect key="frame" x="52" y="782" width="270" height="30"/>
+                    <rect key="frame" x="52" y="832" width="309" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Compartilhar">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

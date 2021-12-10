@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,11 +24,20 @@
 		C114AAC7275FE0DB002B4F9C /* FetchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114AAC6275FE0DB002B4F9C /* FetchRepositoriesResponse.swift */; };
 		C166A128276128D40059D459 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166A126276128D40059D459 /* FilterViewController.swift */; };
 		C166A129276128D40059D459 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C166A127276128D40059D459 /* FilterViewController.xib */; };
+		C18AEE9A2762E19D004AAD2F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AEE992762E19D004AAD2F /* FilterViewModel.swift */; };
+		C18AEE9C2762E414004AAD2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AEE9B2762E414004AAD2F /* DetailViewModel.swift */; };
+		C1CFA0802762B15C0051FB71 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C1CFA07F2762B15C0051FB71 /* RxCocoa */; };
+		C1CFA0822762B15C0051FB71 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1CFA0812762B15C0051FB71 /* RxSwift */; };
+		C1CFA0862762D2460051FB71 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CFA0852762D2460051FB71 /* FilterService.swift */; };
+		C1E4307B2762A1F000A65152 /* RepositoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4307A2762A1F000A65152 /* RepositoriesCoordinator.swift */; };
+		C1E4307D2762A4C400A65152 /* FilterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4307C2762A4C400A65152 /* FilterCoordinator.swift */; };
+		C1E4307F2762A6F800A65152 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4307E2762A6F800A65152 /* DetailCoordinator.swift */; };
+		C1E430812762AC1C00A65152 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E430802762AC1C00A65152 /* RepositoriesViewModel.swift */; };
 		C1E723AD2760E919000475E4 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723AC2760E919000475E4 /* Commit.swift */; };
 		C1E723AF2760F8A0000475E4 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723AE2760F8A0000475E4 /* Branch.swift */; };
 		C1E723B12760F8ED000475E4 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723B02760F8ED000475E4 /* Contributor.swift */; };
 		C1E723B32760F931000475E4 /* Release.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E723B22760F931000475E4 /* Release.swift */; };
-		EB5F6D42275E864C007D1FBF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */; };
+		EB5F6D42275E864C007D1FBF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D41275E864C007D1FBF /* AppCoordinator.swift */; };
 		EB5F6D46275E9B90007D1FBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D45275E9B90007D1FBF /* SceneDelegate.swift */; };
 		EB5F6D48275EA848007D1FBF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F6D47275EA848007D1FBF /* Coordinator.swift */; };
 /* End PBXBuildFile section */
@@ -74,11 +83,18 @@
 		C114AAC6275FE0DB002B4F9C /* FetchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRepositoriesResponse.swift; sourceTree = "<group>"; };
 		C166A126276128D40059D459 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		C166A127276128D40059D459 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		C18AEE992762E19D004AAD2F /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterViewModel.swift; path = DesafioModal/Service/FilterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C18AEE9B2762E414004AAD2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = DesafioModal/Service/DetailViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C1CFA0852762D2460051FB71 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		C1E4307A2762A1F000A65152 /* RepositoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCoordinator.swift; sourceTree = "<group>"; };
+		C1E4307C2762A4C400A65152 /* FilterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCoordinator.swift; sourceTree = "<group>"; };
+		C1E4307E2762A6F800A65152 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		C1E430802762AC1C00A65152 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoriesViewModel.swift; path = DesafioModal/Coordinator/RepositoriesViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C1E723AC2760E919000475E4 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		C1E723AE2760F8A0000475E4 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		C1E723B02760F8ED000475E4 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		C1E723B22760F931000475E4 /* Release.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
-		EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		EB5F6D41275E864C007D1FBF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB5F6D45275E9B90007D1FBF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB5F6D47275EA848007D1FBF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CFA0822762B15C0051FB71 /* RxSwift in Frameworks */,
+				C1CFA0802762B15C0051FB71 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				80F85CD7275FA43300F0FB95 /* GithubService.swift */,
+				C1CFA0852762D2460051FB71 /* FilterService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -196,8 +215,11 @@
 		EB5F6D3E275E854B007D1FBF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				EB5F6D41275E864C007D1FBF /* MainCoordinator.swift */,
+				EB5F6D41275E864C007D1FBF /* AppCoordinator.swift */,
 				EB5F6D47275EA848007D1FBF /* Coordinator.swift */,
+				C1E4307A2762A1F000A65152 /* RepositoriesCoordinator.swift */,
+				C1E4307C2762A4C400A65152 /* FilterCoordinator.swift */,
+				C1E4307E2762A6F800A65152 /* DetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -220,6 +242,9 @@
 		EB5F6D40275E855B007D1FBF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1E430802762AC1C00A65152 /* RepositoriesViewModel.swift */,
+				C18AEE992762E19D004AAD2F /* FilterViewModel.swift */,
+				C18AEE9B2762E414004AAD2F /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +266,10 @@
 			dependencies = (
 			);
 			name = DesafioModal;
+			packageProductDependencies = (
+				C1CFA07F2762B15C0051FB71 /* RxCocoa */,
+				C1CFA0812762B15C0051FB71 /* RxSwift */,
+			);
 			productName = DesafioModal;
 			productReference = 80F85C65275E55ED00F0FB95 /* DesafioModal.app */;
 			productType = "com.apple.product-type.application";
@@ -312,6 +341,9 @@
 				Base,
 			);
 			mainGroup = 80F85C5C275E55ED00F0FB95;
+			packageReferences = (
+				C1CFA07E2762B15C0051FB71 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 80F85C66275E55ED00F0FB95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,21 +411,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E4307F2762A6F800A65152 /* DetailCoordinator.swift in Sources */,
+				C1E4307D2762A4C400A65152 /* FilterCoordinator.swift in Sources */,
 				4E5AE65A27624F17008F6763 /* DetailViewController.swift in Sources */,
 				80F85CE2275FD38D00F0FB95 /* RepositoryTableViewCell.swift in Sources */,
-				C114AAC7275FE0DB002B4F9C /* GithubResponse.swift in Sources */,
+				C114AAC7275FE0DB002B4F9C /* FetchRepositoriesResponse.swift in Sources */,
 				C166A128276128D40059D459 /* FilterViewController.swift in Sources */,
 				C1E723AD2760E919000475E4 /* Commit.swift in Sources */,
 				80F85CE2275FD38D00F0FB95 /* RepositoryTableViewCell.swift in Sources */,
-				80F85C6D275E55ED00F0FB95 /* ViewController.swift in Sources */,
 				C1E723B32760F931000475E4 /* Release.swift in Sources */,
+				C1CFA0862762D2460051FB71 /* FilterService.swift in Sources */,
+				C18AEE9A2762E19D004AAD2F /* FilterViewModel.swift in Sources */,
 				C114AAC7275FE0DB002B4F9C /* FetchRepositoriesResponse.swift in Sources */,
-				EB5F6D42275E864C007D1FBF /* MainCoordinator.swift in Sources */,
+				EB5F6D42275E864C007D1FBF /* AppCoordinator.swift in Sources */,
+				C18AEE9C2762E414004AAD2F /* DetailViewModel.swift in Sources */,
 				C1E723AF2760F8A0000475E4 /* Branch.swift in Sources */,
 				80F85CD8275FA43300F0FB95 /* GithubService.swift in Sources */,
 				C1E723B12760F8ED000475E4 /* Contributor.swift in Sources */,
+				C1E430812762AC1C00A65152 /* RepositoriesViewModel.swift in Sources */,
 				EB5F6D48275EA848007D1FBF /* Coordinator.swift in Sources */,
 				4E5AE6532760F11A008F6763 /* RepositoriesViewController.swift in Sources */,
+				C1E4307B2762A1F000A65152 /* RepositoriesCoordinator.swift in Sources */,
 				4E5AE65727613F36008F6763 /* Utils.swift in Sources */,
 				80F85CD2275FA2ED00F0FB95 /* Repository.swift in Sources */,
 				80F85C69275E55ED00F0FB95 /* AppDelegate.swift in Sources */,
@@ -716,6 +754,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1CFA07E2762B15C0051FB71 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1CFA07F2762B15C0051FB71 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1CFA07E2762B15C0051FB71 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C1CFA0812762B15C0051FB71 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1CFA07E2762B15C0051FB71 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80F85C5D275E55ED00F0FB95 /* Project object */;
 }
