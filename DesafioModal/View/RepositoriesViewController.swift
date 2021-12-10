@@ -5,57 +5,49 @@
 //  Created by RICARDO AGNELO DE OLIVEIRA on 08/12/21.
 //
 
+import RxCocoa
+import RxSwift
 import UIKit
 
 class RepositoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     @IBOutlet var numbersOfFilters: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var filterNames: UIView!
-    @IBOutlet var textField: UITextField!
 
-    var filterByName: String?
+    @IBOutlet var searchButton: UIButton!
+    @IBOutlet var searchTextField: UITextField!
+    @IBOutlet var filterButton: UIButton!
+
+    @IBOutlet var clearFiltersButton: UIButton!
+
+    private let disposeBag = DisposeBag()
+    var viewModel: RepositoriesViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setUpBindings()
+
         roundTop(viewName: filterNames)
         roundCorners(numbersOfFilters: numbersOfFilters)
         bottomBlackline(viewName: filterNames)
         tableView.delegate = self
         tableView.dataSource = self
-        textField.delegate = self
+        searchTextField.delegate = self
 
         self.hideKeyboardWhenTappedAround()
 
         tableView.register(UINib(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
-        let service = GithubService()
-
-        service.searchRepositories(query: "A") { [weak self] result in
-            switch result {
-            case .success(let result):
-                self?.result = result.repositories
-                self?.tableView.reloadData()
-
-            case .error(let message):
-                let alert = UIAlertController(title: "Não foi possível realizar essa ação.", message: message, preferredStyle: .alert)
-
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-
-                self?.present(alert, animated: true)
-            }
-        }
     }
 
-    var result: [Repository]?
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return result?.count ?? 0
+        return self.viewModel.repositories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath) as? RepositoryTableViewCell {
-            if let result = result {
-                cell.setData(repository: result[indexPath.row])
-            }
+
+            cell.setData(repository: self.viewModel.repositories[indexPath.row])
 
             if !indexPath.row.isMultiple(of: 2) {
                 cell.invertTheme()
@@ -69,46 +61,36 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         return UITableViewCell()
     }
 
-    @IBAction func filterByNameChanged(_ sender: UITextField) {
-        filterByName = sender.text
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repository = self.viewModel.repositories[indexPath.row]
+        self.viewModel.showDetailsOfRepository(repository)
     }
 
-    @IBAction func searchButtonPressed(_ sender: UIButton) {
-        let service = GithubService()
-        service.searchRepositories(query: filterByName ?? "") { [weak self] result in
-            switch result {
-            case .success(let result):
-                self?.result = result.repositories
-                self?.tableView.reloadData()
+    private func setUpBindings() {
+        searchTextField.rx.controlEvent(.editingDidEnd)
+            .subscribe(onNext: { [weak self] in self?.viewModel.search() })
+            .disposed(by: disposeBag)
 
-            case .error(let message):
-                let alert = UIAlertController(title: "Não foi possível realizar essa ação.", message: message, preferredStyle: .alert)
+        searchTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.searchQuery)
+            .disposed(by: disposeBag)
 
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        searchButton.rx.tap
+            .bind { [weak self] in self?.viewModel.search() }
+            .disposed(by: disposeBag)
 
-                self?.present(alert, animated: true)
-            }
-        }
-    }
+        viewModel.didSearchEnded
+            .subscribe(onNext: { [weak self] in self?.tableView.reloadData() })
+            .disposed(by: disposeBag)
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let service = GithubService()
-        service.searchRepositories(query: textField.text ?? "") { [weak self] result in
-            switch result {
-            case .success(let result):
-                self?.result = result.repositories
-                self?.tableView.reloadData()
+        filterButton.rx.tap
+            .bind { [weak self] in self?.viewModel.showFilterSettings() }
+            .disposed(by: disposeBag)
 
-            case .error(let message):
-                let alert = UIAlertController(title: "Não foi possível realizar essa ação.", message: message, preferredStyle: .alert)
-
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-
-                self?.present(alert, animated: true)
-            }
-        }
-
-        return true
+        clearFiltersButton.rx.tap
+            .bind { [weak self] in self?.viewModel.clearFilters() }
+            .disposed(by: disposeBag)
     }
 
 }

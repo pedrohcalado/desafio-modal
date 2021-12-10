@@ -11,10 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoriesViewController" customModule="DesafioModal" customModuleProvider="target">
             <connections>
+                <outlet property="clearFiltersButton" destination="R7a-LB-tff" id="iGk-dX-THp"/>
+                <outlet property="filterButton" destination="UuF-h0-3cu" id="ur9-6o-nYo"/>
                 <outlet property="filterNames" destination="aUr-sF-2WU" id="zbe-eg-Z0U"/>
                 <outlet property="numbersOfFilters" destination="aKo-xo-d8i" id="slE-8f-ZYq"/>
+                <outlet property="searchButton" destination="4L7-eW-DQN" id="T7X-RN-yX0"/>
+                <outlet property="searchTextField" destination="Orc-vW-OdR" id="vxc-SW-bWN"/>
                 <outlet property="tableView" destination="fPR-mC-uzp" id="DyA-fB-axH"/>
-                <outlet property="textField" destination="Orc-vW-OdR" id="vxc-SW-bWN"/>
                 <outlet property="view" destination="9mk-Xf-KBM" id="MnH-uL-Vdh"/>
             </connections>
         </placeholder>
@@ -54,9 +57,6 @@
                                 <constraint firstAttribute="width" constant="28" id="7kQ-Gx-afM"/>
                             </constraints>
                             <state key="normal" backgroundImage="d18121d326c730953a902bdf511667a3-1"/>
-                            <connections>
-                                <action selector="searchButtonPressed:" destination="-1" eventType="touchUpInside" id="Wxq-Lz-bDZ"/>
-                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuF-h0-3cu">
                             <rect key="frame" x="378" y="-4" width="28" height="28"/>
@@ -113,9 +113,6 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <action selector="filterByNameChanged:" destination="-1" eventType="editingChanged" id="Goj-pn-Jlg"/>
-                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.50196078431372548" green="0.87450980392156863" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

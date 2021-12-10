@@ -8,17 +8,19 @@
 import Foundation
 import UIKit
 
-class MainCoordinator: Coordinator {
-    var navigationController: UINavigationController
-
-    var viewController = DetailViewController()
+class AppCoordinator: BaseCoordinator {
 
     init(navigationController: UINavigationController) {
+        super.init()
         self.navigationController = navigationController
     }
 
-    func start() {
+    override func start() {
         self.navigationController.navigationBar.isHidden = true
-        navigationController.pushViewController(viewController, animated: true)
+
+        let coordinator = RepositoriesCoordinator()
+        coordinator.navigationController = navigationController
+
+        start(coordinator: coordinator)
     }
 }

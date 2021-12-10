@@ -15,11 +15,9 @@ public final class GithubService {
     }
 
     public enum Sorting: String {
-        case stars = "stars"
-        case forks = "forks"
-        case helpWantedIssues = "help-wanted-issues"
-        case bestMatch = "bestmatch"
-        case updated = "updated"
+        case stars
+        case forks
+        case updated
     }
 
     public enum Order: String {
@@ -36,7 +34,7 @@ public final class GithubService {
 
     public func searchRepositories(
         query: String,
-        sorting: Sorting = .bestMatch,
+        sorting: Sorting? = nil,
         order: Order = .desc,
         count: Int = 30, page: Int = 1,
         completion: @escaping (Result<FetchRepositoriesResponse>) -> Void
@@ -48,7 +46,7 @@ public final class GithubService {
         components.path = "/search/repositories"
         components.queryItems = [
             URLQueryItem(name: "q", value: query),
-            URLQueryItem(name: "sort", value: sorting.rawValue),
+            URLQueryItem(name: "sort", value: sorting == nil ? "bestmatch" : sorting?.rawValue),
             URLQueryItem(name: "order", value: order.rawValue),
             URLQueryItem(name: "per_page", value: String(count)),
             URLQueryItem(name: "page", value: String(page))
@@ -83,6 +81,9 @@ public final class GithubService {
         components.scheme = "https"
         components.host = "api.github.com"
         components.path = "/repos/\(repository.fullName)/\(resource.rawValue)"
+        components.queryItems = [
+            URLQueryItem(name: "per_page", value: String(100))
+        ]
 
         guard let url = components.url else {
             completion(.error(message: nil))
