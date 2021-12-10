@@ -22,6 +22,7 @@
                 <outlet property="shareButton" destination="EkV-La-rUM" id="Wg3-Fu-E5n"/>
                 <outlet property="stargazersLabel" destination="1U0-HZ-UCg" id="0og-V5-R4R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="Ick-XN-HiS" id="Jds-Tu-ZlB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -255,10 +256,14 @@
                                 <constraint firstItem="o1C-P1-yHB" firstAttribute="leading" secondItem="rVC-d8-fFQ" secondAttribute="leading" id="hwS-Ir-awW"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEN-E0-5le" userLabel="Readme View">
-                            <rect key="frame" x="0.0" y="254" width="398" height="378"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </view>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ick-XN-HiS">
+                            <rect key="frame" x="0.0" y="246" width="398" height="401"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -267,22 +272,22 @@
                         <constraint firstItem="HBz-LL-pqn" firstAttribute="leading" secondItem="Bdj-Eg-kmy" secondAttribute="leading" constant="24" id="Cds-bV-BSb"/>
                         <constraint firstItem="yfb-qz-aeZ" firstAttribute="top" secondItem="HBz-LL-pqn" secondAttribute="bottom" constant="20" id="JAh-Lb-Mqf"/>
                         <constraint firstItem="wEK-MM-DFM" firstAttribute="leading" secondItem="Bdj-Eg-kmy" secondAttribute="leading" id="K7W-WE-qA5"/>
+                        <constraint firstItem="Ick-XN-HiS" firstAttribute="leading" secondItem="Bdj-Eg-kmy" secondAttribute="leading" id="SdA-2b-c9h"/>
+                        <constraint firstAttribute="bottom" secondItem="Ick-XN-HiS" secondAttribute="bottom" id="U9R-Gr-d9g"/>
                         <constraint firstItem="yfb-qz-aeZ" firstAttribute="leading" secondItem="Bdj-Eg-kmy" secondAttribute="leading" constant="24" id="V93-ga-dKy"/>
                         <constraint firstItem="gpr-H7-5Lg" firstAttribute="top" secondItem="TDz-Us-LXw" secondAttribute="bottom" constant="19" id="ZcI-Pv-MUd"/>
+                        <constraint firstItem="Ick-XN-HiS" firstAttribute="top" secondItem="wEK-MM-DFM" secondAttribute="bottom" constant="8" symbolic="YES" id="b1F-VW-meM"/>
                         <constraint firstAttribute="trailing" secondItem="wEK-MM-DFM" secondAttribute="trailing" id="b73-0f-BKI"/>
                         <constraint firstItem="5jj-Uz-zYA" firstAttribute="leading" secondItem="p86-As-QxE" secondAttribute="trailing" constant="8" id="cL8-eM-Hz8"/>
                         <constraint firstItem="rVC-d8-fFQ" firstAttribute="top" secondItem="rQL-Te-agU" secondAttribute="bottom" constant="20" id="dRx-rJ-PMD"/>
                         <constraint firstItem="rQL-Te-agU" firstAttribute="top" secondItem="gpr-H7-5Lg" secondAttribute="bottom" constant="16" id="ffd-OG-trT"/>
                         <constraint firstItem="p86-As-QxE" firstAttribute="leading" secondItem="Bdj-Eg-kmy" secondAttribute="leading" constant="24" id="gCA-yk-x5q"/>
-                        <constraint firstAttribute="bottom" secondItem="pEN-E0-5le" secondAttribute="bottom" constant="15" id="goq-ty-b74"/>
                         <constraint firstItem="rQL-Te-agU" firstAttribute="leading" secondItem="HBz-LL-pqn" secondAttribute="trailing" constant="80" id="h4r-lf-rT1"/>
                         <constraint firstItem="rVC-d8-fFQ" firstAttribute="leading" secondItem="yfb-qz-aeZ" secondAttribute="trailing" constant="80" id="hXS-0t-CW9"/>
-                        <constraint firstAttribute="trailing" secondItem="pEN-E0-5le" secondAttribute="trailing" id="mL5-cq-sLB"/>
                         <constraint firstAttribute="trailing" secondItem="TDz-Us-LXw" secondAttribute="trailing" constant="24" id="qnX-2t-HM5"/>
+                        <constraint firstAttribute="trailing" secondItem="Ick-XN-HiS" secondAttribute="trailing" id="riU-wO-4kM"/>
                         <constraint firstAttribute="trailing" secondItem="gpr-H7-5Lg" secondAttribute="trailing" id="tKx-m1-a7T"/>
                         <constraint firstItem="wEK-MM-DFM" firstAttribute="top" secondItem="yfb-qz-aeZ" secondAttribute="bottom" constant="14" id="vwF-uf-Kaj"/>
-                        <constraint firstItem="pEN-E0-5le" firstAttribute="top" secondItem="wEK-MM-DFM" secondAttribute="bottom" constant="16" id="y5T-yh-xB1"/>
-                        <constraint firstItem="pEN-E0-5le" firstAttribute="leading" secondItem="Bdj-Eg-kmy" secondAttribute="leading" id="zGD-aM-zwy"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkV-La-rUM">
@@ -314,7 +319,7 @@
                 <constraint firstItem="5jj-Uz-zYA" firstAttribute="top" secondItem="SnS-a2-WZt" secondAttribute="bottom" constant="16" id="mgz-5f-Ryc"/>
                 <constraint firstItem="SnS-a2-WZt" firstAttribute="centerX" secondItem="Bdj-Eg-kmy" secondAttribute="centerX" id="yvM-Q8-nT9"/>
             </constraints>
-            <point key="canvasLocation" x="18.399999999999999" y="93.103448275862078"/>
+            <point key="canvasLocation" x="17.39130434782609" y="93.080357142857139"/>
         </view>
     </objects>
     <resources>

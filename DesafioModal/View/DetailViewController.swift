@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import WebKit
 
 class DetailViewController: UIViewController {
 
@@ -23,6 +24,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var branchesLabel: UILabel!
     @IBOutlet var colaboratorsLabel: UILabel!
 
+    @IBOutlet var webView: WKWebView!
+
     private let disposeBag = DisposeBag()
     var viewModel: DetailViewModel!
 
@@ -30,6 +33,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         setUpBindings()
+        viewModel.loadReadme()
 
         view.backgroundColor = UIColor(red: 235 / 255, green: 236 / 255, blue: 238 / 255, alpha: 1.0)
         roundTop(viewName: repoView)
@@ -77,7 +81,9 @@ class DetailViewController: UIViewController {
         viewModel.colaborators
             .bind(to: colaboratorsLabel.rx.text)
             .disposed(by: disposeBag)
-    }
 
-// da certo ae o coisa linda app bonito amo modalmais <3 modal na veia #EuSouModal
+        viewModel.readme
+            .subscribe(onNext: { [weak self] html in self?.webView.loadHTMLString(html, baseURL: nil) })
+            .disposed(by: disposeBag)
+    }
 }
