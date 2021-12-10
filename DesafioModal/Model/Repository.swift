@@ -12,6 +12,7 @@ public struct Repository: Decodable {
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case fullName = "full_name"
+        case updateAt = "updated_at"
         case createdAt = "created_at"
         case stargazersCount = "stargazers_count"
         case watchersCount = "watchers_count"
@@ -20,6 +21,7 @@ public struct Repository: Decodable {
 
     let name: String
     let fullName: String
+    let updatedAt: String
     let createdAt: String
     let stargazersCount: Int
     let watchersCount: Int
@@ -30,6 +32,7 @@ public struct Repository: Decodable {
 
         name = try values.decode(String.self, forKey: .name)
         fullName = try values.decode(String.self, forKey: .fullName)
+        updatedAt = try values.decode(String.self, forKey: .updateAt)
         createdAt = try values.decode(String.self, forKey: .createdAt)
         stargazersCount = try values.decode(Int.self, forKey: .stargazersCount)
         watchersCount = try values.decode(Int.self, forKey: .watchersCount)

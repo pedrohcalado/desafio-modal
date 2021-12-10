@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,6 +13,8 @@
                 <outlet property="clearFiltersButton" destination="R7a-LB-tff" id="iGk-dX-THp"/>
                 <outlet property="filterButton" destination="UuF-h0-3cu" id="ur9-6o-nYo"/>
                 <outlet property="filterNames" destination="aUr-sF-2WU" id="zbe-eg-Z0U"/>
+                <outlet property="filterOrderButton" destination="vmk-3f-cRv" id="1MX-Cl-QdT"/>
+                <outlet property="filterSortButton" destination="cS2-Gh-Kmo" id="bDa-e1-xAf"/>
                 <outlet property="numbersOfFilters" destination="aKo-xo-d8i" id="slE-8f-ZYq"/>
                 <outlet property="searchButton" destination="4L7-eW-DQN" id="T7X-RN-yX0"/>
                 <outlet property="searchTextField" destination="Orc-vW-OdR" id="vxc-SW-bWN"/>
@@ -33,12 +34,69 @@
                             <rect key="frame" x="0.0" y="158" width="428" height="496"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hs-ok-NhA">
+                            <rect key="frame" x="8" y="42" width="412" height="140"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTRANDO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP2-4z-WxH">
+                                    <rect key="frame" x="0.0" y="0.0" width="412" height="11"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="11" id="iTq-4r-LdR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="9"/>
+                                    <color key="textColor" red="0.63149005170000005" green="0.65095549819999998" blue="0.6900721192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-Yf-KLm">
+                                    <rect key="frame" x="0.0" y="19" width="412" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cS2-Gh-Kmo">
+                                            <rect key="frame" x="0.0" y="0.0" width="122.66666666666667" height="40"/>
+                                            <accessibility key="accessibilityConfiguration" label="stars"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="v3Q-Af-WdW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="12"/>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="DATA" image="xmark" catalog="system">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmk-3f-cRv">
+                                            <rect key="frame" x="130.66666666666666" y="0.0" width="281.33333333333337" height="40"/>
+                                            <accessibility key="accessibilityConfiguration" label="updated"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Htb-cz-541"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="12"/>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="DECRESCENTE" image="xmark" catalog="system">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="KP2-4z-WxH" firstAttribute="top" secondItem="4Hs-ok-NhA" secondAttribute="top" id="KDd-gU-M0j"/>
+                                <constraint firstAttribute="trailing" secondItem="KP2-4z-WxH" secondAttribute="trailing" id="MgX-sy-U6J"/>
+                                <constraint firstItem="lKb-Yf-KLm" firstAttribute="top" secondItem="KP2-4z-WxH" secondAttribute="bottom" constant="8" id="ZYv-BT-gzP"/>
+                                <constraint firstAttribute="trailing" secondItem="lKb-Yf-KLm" secondAttribute="trailing" id="jI5-Oz-HXN"/>
+                                <constraint firstItem="lKb-Yf-KLm" firstAttribute="leading" secondItem="4Hs-ok-NhA" secondAttribute="leading" id="mB1-yN-p0I"/>
+                                <constraint firstItem="KP2-4z-WxH" firstAttribute="leading" secondItem="4Hs-ok-NhA" secondAttribute="leading" id="nG2-qf-IGG"/>
+                                <constraint firstItem="lKb-Yf-KLm" firstAttribute="leading" secondItem="4Hs-ok-NhA" secondAttribute="leading" id="q2e-vN-hpW"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fPR-mC-uzp" secondAttribute="trailing" id="562-N2-Ul6"/>
                         <constraint firstItem="fPR-mC-uzp" firstAttribute="leading" secondItem="bDq-sd-Ldh" secondAttribute="leading" id="9F6-Ud-fcj"/>
+                        <constraint firstItem="fPR-mC-uzp" firstAttribute="top" secondItem="4Hs-ok-NhA" secondAttribute="bottom" constant="-24" id="9t5-fF-qUu"/>
                         <constraint firstItem="fPR-mC-uzp" firstAttribute="top" secondItem="bDq-sd-Ldh" secondAttribute="top" constant="158" id="Q3g-vi-MWJ"/>
+                        <constraint firstAttribute="trailing" secondItem="4Hs-ok-NhA" secondAttribute="trailing" constant="8" id="ZbX-v9-leD"/>
+                        <constraint firstItem="4Hs-ok-NhA" firstAttribute="leading" secondItem="bDq-sd-Ldh" secondAttribute="leading" constant="8" id="kJS-3d-kjV"/>
                         <constraint firstAttribute="bottom" secondItem="fPR-mC-uzp" secondAttribute="bottom" id="zkb-wo-lgt"/>
                     </constraints>
                 </view>
@@ -148,6 +206,7 @@
                 <constraint firstItem="bDq-sd-Ldh" firstAttribute="leading" secondItem="R7a-LB-tff" secondAttribute="leading" id="ohc-Ps-B5F"/>
                 <constraint firstItem="JSF-bo-xgW" firstAttribute="top" secondItem="oeQ-ZK-Y4e" secondAttribute="top" constant="54" id="p1L-uM-r5P"/>
                 <constraint firstItem="bDq-sd-Ldh" firstAttribute="top" secondItem="JSF-bo-xgW" secondAttribute="bottom" constant="54" id="uVU-V9-Q2M"/>
+                <constraint firstItem="4Hs-ok-NhA" firstAttribute="top" secondItem="aUr-sF-2WU" secondAttribute="bottom" constant="16" id="vb0-HE-dUd"/>
                 <constraint firstItem="oeQ-ZK-Y4e" firstAttribute="trailing" secondItem="R7a-LB-tff" secondAttribute="trailing" id="xqz-r1-VZt"/>
             </constraints>
             <point key="canvasLocation" x="-74.299065420560737" y="-574.08207343412528"/>
@@ -157,6 +216,7 @@
         <image name="386f10269bef49970fadf847d6076753-1" width="18.666666030883789" height="18.666666030883789"/>
         <image name="d18121d326c730953a902bdf511667a3-1" width="18.666666030883789" height="18.666666030883789"/>
         <image name="image-1" width="40" height="40"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

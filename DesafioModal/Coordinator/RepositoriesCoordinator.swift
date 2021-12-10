@@ -5,11 +5,12 @@ import RxSwift
 
 class RepositoriesCoordinator: BaseCoordinator {
     private let disposeBag = DisposeBag()
+    var viewModel: RepositoriesViewModel!
 
     override func start() {
         let viewController = RepositoriesViewController()
 
-        let viewModel = RepositoriesViewModel(githubService: GithubService())
+        viewModel = RepositoriesViewModel(githubService: GithubService())
         viewController.viewModel = viewModel
 
         viewModel.didRepositoryCellTapped
@@ -21,6 +22,7 @@ class RepositoriesCoordinator: BaseCoordinator {
             .disposed(by: disposeBag)
 
         navigationController.viewControllers = [viewController]
+        viewModel.didViewUpdated.onNext(())
     }
 
     func transitionToFilterView() {
@@ -35,6 +37,11 @@ class RepositoriesCoordinator: BaseCoordinator {
         coordinator.navigationController = navigationController
 
         start(coordinator: coordinator)
+    }
+
+    override func didFinish(coordinator: Coordinator) {
+        super.didFinish(coordinator: coordinator)
+        viewModel.didViewUpdated.onNext(())
     }
 
 }
