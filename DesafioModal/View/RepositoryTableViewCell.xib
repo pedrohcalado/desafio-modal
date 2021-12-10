@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -230,6 +230,7 @@
                 <outlet property="forksNumber" destination="9lf-wx-C0c" id="LG3-kz-TV7"/>
                 <outlet property="name" destination="415-OL-n3w" id="TbG-kN-hGW"/>
                 <outlet property="owner" destination="3lY-PL-RTA" id="vqd-33-oaK"/>
+                <outlet property="profilePicture" destination="dsh-Vr-iag" id="u7z-hq-sZy"/>
                 <outlet property="starsLabel" destination="Eie-rB-5zN" id="cbg-Fk-JfQ"/>
                 <outlet property="starsNumber" destination="fea-Gy-LUE" id="pJF-3l-Bpp"/>
                 <outlet property="topRectangle" destination="h7T-MF-45r" id="74N-mb-Ih7"/>

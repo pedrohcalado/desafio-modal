@@ -8,6 +8,7 @@ class DetailViewModel {
     let repository: Repository!
 
     let name = BehaviorSubject(value: "")
+    let profilePicture = BehaviorSubject(value: "")
     let stargazers = BehaviorSubject(value: "...")
 
     let commits = BehaviorSubject(value: "...")

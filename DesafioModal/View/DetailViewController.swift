@@ -26,6 +26,8 @@ class DetailViewController: UIViewController {
 
     @IBOutlet var webView: WKWebView!
 
+    @IBOutlet var profilePicture: UIImageView!
+
     private let disposeBag = DisposeBag()
     var viewModel: DetailViewModel!
 
