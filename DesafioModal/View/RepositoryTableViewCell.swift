@@ -64,7 +64,7 @@ class RepositoryTableViewCell: UITableViewCell {
         self.starsNumber.text = numberFormatter.string(from: NSNumber(value: repository.stargazersCount))
         self.watchersNumber.text = numberFormatter.string(from: NSNumber(value: repository.watchersCount))
         self.forksNumber.text = numberFormatter.string(from: NSNumber(value: repository.forksCount))
-        self.daysAgo.text = "\(numberFormatter.string(from: NSNumber(value: formatDate(date: repository.createdAt)))!) dias"
+        self.daysAgo.text = "\(numberFormatter.string(from: NSNumber(value: formatDate(date: repository.updatedAt)))!) dias"
     }
 
     func formatDate(date: String) -> Int {

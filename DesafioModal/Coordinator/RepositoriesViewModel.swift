@@ -4,7 +4,9 @@ import RxCocoa
 import RxSwift
 
 class RepositoriesViewModel {
+
     private let githubService: GithubService
+    let filterService: FilterService
 
     let searchQuery = BehaviorSubject(value: "")
     var repositories: [Repository] = []
@@ -13,9 +15,11 @@ class RepositoriesViewModel {
     let didRepositoryCellTapped = PublishSubject<Repository>()
     let didFilterSettingsButtonTapped = PublishSubject<Void>()
 
+    let didViewUpdated = PublishSubject<Void>()
+
     init(githubService: GithubService) {
         self.githubService = githubService
-
+        self.filterService = FilterService.shared
         search()
     }
 

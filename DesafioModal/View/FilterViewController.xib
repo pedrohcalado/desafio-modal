@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,9 +33,6 @@
                         <constraint firstAttribute="width" constant="28" id="aVv-G0-ggH"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=" ">
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-aY-3KH">
                     <rect key="frame" x="57" y="44" width="42" height="56"/>
@@ -71,10 +67,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="APLICAR FILTRO"/>
-                            <buttonConfiguration key="configuration" style="filled" title="APLICAR FILTRO">
-                                <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bb-Vo-owX">
                             <rect key="frame" x="0.0" y="35" width="390" height="108"/>
@@ -88,13 +80,12 @@
                                 <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ij7-4e-ZBb">
                                     <rect key="frame" x="16" y="41" width="358" height="40"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eu-r9-Mb1">
-                                            <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="40"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eu-r9-Mb1">
+                                            <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="40"/>
                                             <accessibility key="accessibilityConfiguration" label="stars"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="GRg-5b-6MV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="ESTRELAS">
@@ -102,7 +93,7 @@
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmh-7l-MtP">
-                                            <rect key="frame" x="125.66666666666666" y="0.0" width="139.99999999999997" height="40"/>
+                                            <rect key="frame" x="151.66666666666666" y="0.0" width="125.33333333333334" height="40"/>
                                             <accessibility key="accessibilityConfiguration" label="forks"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="pLO-Ua-8BK"/>
@@ -115,7 +106,7 @@
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfe-E4-dUc">
-                                            <rect key="frame" x="279.66666666666669" y="0.0" width="78.333333333333314" height="40"/>
+                                            <rect key="frame" x="291" y="0.0" width="67" height="40"/>
                                             <accessibility key="accessibilityConfiguration" label="updated"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="obv-bZ-9fe"/>
@@ -232,7 +223,6 @@
         </view>
     </objects>
     <resources>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
