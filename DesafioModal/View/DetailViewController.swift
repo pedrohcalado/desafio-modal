@@ -39,6 +39,7 @@ class DetailViewController: UIViewController {
 
         view.backgroundColor = UIColor(red: 235 / 255, green: 236 / 255, blue: 238 / 255, alpha: 1.0)
         roundTop(viewName: repoView)
+
     }
 
     private func setUpBindings() {
@@ -62,6 +63,10 @@ class DetailViewController: UIViewController {
 
         viewModel.name
             .bind(to: nameLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        viewModel.profilePicture
+            .bind(to: profilePicture.rx.image)
             .disposed(by: disposeBag)
 
         viewModel.stargazers

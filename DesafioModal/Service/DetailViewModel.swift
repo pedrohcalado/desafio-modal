@@ -1,6 +1,7 @@
 // DetailViewModel.swift
 
 import RxSwift
+import UIKit
 
 class DetailViewModel {
     private let githubService: GithubService
@@ -8,7 +9,7 @@ class DetailViewModel {
     let repository: Repository!
 
     let name = BehaviorSubject(value: "")
-    let profilePicture = BehaviorSubject(value: "")
+    let profilePicture: Observable<UIImage?>
     let stargazers = BehaviorSubject(value: "...")
 
     let commits = BehaviorSubject(value: "...")
@@ -26,6 +27,9 @@ class DetailViewModel {
 
         name.onNext(repository.fullName)
         stargazers.onNext("\(repository.stargazersCount)")
+
+        let data = try? Data(contentsOf: URL(string: "https://github.com/\(repository.owner).png")!)
+        self.profilePicture = Observable.just(UIImage(data: data!))
 
         fetchDataFromGithubApi()
     }
