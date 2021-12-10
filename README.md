@@ -12,7 +12,7 @@ Outra funcionalidades incluem:
 
 Para executar o projeto basta clonar este repositório e compilar o projeto com o `XCode`
 
-## Prerequisites
+## Pré-requisitos
 
 Tudo o que você precisa para rodar o app.
 
@@ -24,15 +24,33 @@ Tudo o que você precisa para rodar o app.
 
 # ScreenShots
 
-<img src="AppScreenShots/TelaPrincipal.png" alt="drawing" width="400"/>
-<img src="AppScreenShots/TelaFiltros.png" alt="drawing" width="400"/>
+
+<p align="center">
+    <img src="AppScreenShots/TelaPrincipal.png" alt="drawing" width="400"/>
+    <img src="AppScreenShots/TelaFiltros.png" alt="drawing" width="400"/>
+</p>
 
 # Autores
 
-![Jessé Monteiro](https://img.shields.io/badge/Jessé-Monteiro-white?style=for-the-badge&logo=CoffeeScript&link=https://www.linkedin.com/in/jessemonteiro/&link=https://github.com/JesseMonteiro)
-![Marco Antônio](https://img.shields.io/badge/Marco-Antônio-red?style=for-the-badge&logo=CoffeeScript&link=https://www.linkedin.com/in/marcoantoniosm/&link=https://github.com/marcodsl)
-![Marcos Rocha](https://img.shields.io/badge/Marcos-Rocha-blue?style=for-the-badge&logo=CoffeeScript&link=https://www.linkedin.com/in/marcosfeliperocha/&link=https://github.com/mflipe)
-
-![Matheus Carvalho](https://img.shields.io/badge/Matheus-Carvalho-green?style=for-the-badge&logo=CoffeeScript&link=https://www.linkedin.com/in/matheus-de-assis-carvalho&link=https://github.com/MatheusAssisCarvalho)
-![Pedro Calado](https://img.shields.io/badge/Pedro-Calado-grey?style=for-the-badge&logo=CoffeeScript&link=https://www.linkedin.com/in/pedrohcalado&link=https://github.com/pedrohcalado)
-![Ricardo Agnelo](https://img.shields.io/badge/Ricardo-Agnelo-orange?style=for-the-badge&logo=CoffeeScript&link=https://github.com/RicardoAgnelo&link=https://github.com/RicardoAgnelo)
+<p align="center">
+    <a href="https://www.linkedin.com/in/jessemonteiro/" alt="Jessé Monteiro">
+        <img src="https://img.shields.io/badge/Jessé-Monteiro-white?style=for-the-badge&logo=CoffeeScript"/>
+    </a>
+    <a href="https://www.linkedin.com/in/marcoantoniosm/" alt="Marco Antônio">
+        <img src="https://img.shields.io/badge/Marco-Antônio-red?style=for-the-badge&logo=CoffeeScript"/>
+    </a>
+    <a href="https://www.linkedin.com/in/marcosfeliperocha/" alt="Marcos Rocha">
+        <img src="https://img.shields.io/badge/Marcos-Rocha-blue?style=for-the-badge&logo=CoffeeScript"/>
+    </a>
+</p>
+<p align="center">
+    <a href="https://www.linkedin.com/in/matheus-de-assis-carvalho" alt="Matheus Carvalho">
+        <img src="https://img.shields.io/badge/Matheus-Carvalho-green?style=for-the-badge&logo=CoffeeScript"/>
+    </a>
+    <a href="https://www.linkedin.com/in/pedrohcalado" alt="Pedro Calado">
+        <img src="https://img.shields.io/badge/Pedro-Calado-grey?style=for-the-badge&logo=CoffeeScript"/>
+    </a>
+     <a href="https://github.com/RicardoAgnelo" alt="Ricardo Agnelo">
+        <img src="https://img.shields.io/badge/Ricardo-Agnelo-orange?style=for-the-badge&logo=CoffeeScript"/>
+    </a>
+</p>
