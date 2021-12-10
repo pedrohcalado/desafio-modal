@@ -93,6 +93,50 @@ public final class GithubService {
         self.request(url: url, completion: completion)
     }
 
+    func getReadmeOf(_ repository: Repository, completion: @escaping (Result<String>) -> Void) {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.github.com"
+        components.path = "/repos/\(repository.fullName)/readme"
+
+        guard let url = components.url else {
+            completion(.error(message: nil))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.setValue("application/vnd.github-commitcomment.html+json", forHTTPHeaderField: "accept")
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            var result: Result<String>
+
+            defer {
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+
+            if let error = error {
+                result = .error(message: error.localizedDescription)
+                return
+            }
+
+            guard let data = data else {
+                result = .error(message: nil)
+                return
+            }
+
+            let response = String(data: data, encoding: .utf8)
+
+            if response != nil {
+                result = .success(result: response!)
+            } else {
+                result = .error(message: nil)
+            }
+
+        }.resume()
+    }
+
     private func request<T: Decodable>(url: URL, completion: @escaping (Result<T>) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             var result: Result<T>

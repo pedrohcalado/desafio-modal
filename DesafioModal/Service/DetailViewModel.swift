@@ -15,6 +15,8 @@ class DetailViewModel {
     let branches = BehaviorSubject(value: "...")
     let colaborators = BehaviorSubject(value: "...")
 
+    let readme = PublishSubject<String>()
+
     let didBackButtonTapped = PublishSubject<Void>()
 
     init(repository: Repository, githubService: GithubService) {
@@ -29,6 +31,18 @@ class DetailViewModel {
 
     func leaveDetailView() {
         didBackButtonTapped.onNext(())
+    }
+
+    func loadReadme() {
+        githubService.getReadmeOf(repository) { [weak self] result in
+            switch result {
+            case .success(let html):
+                self?.readme.onNext(html)
+
+            default:
+                self?.readme.onNext("<html><body><p>Não foi possível carregar o README do repositório</p></body></html>")
+            }
+        }
     }
 
     private func fetchDataFromGithubApi() {
