@@ -20,6 +20,8 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet var topRectangle: UIView!
     @IBOutlet var bottomRectangle: UIView!
 
+    @IBOutlet var profilePicture: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor(red: 235 / 255, green: 236 / 255, blue: 238 / 255, alpha: 1.0)
@@ -65,6 +67,9 @@ class RepositoryTableViewCell: UITableViewCell {
         self.watchersNumber.text = numberFormatter.string(from: NSNumber(value: repository.watchersCount))
         self.forksNumber.text = numberFormatter.string(from: NSNumber(value: repository.forksCount))
         self.daysAgo.text = "\(numberFormatter.string(from: NSNumber(value: formatDate(date: repository.updatedAt)))!) dias"
+
+        let data = try? Data(contentsOf: URL(string: "https://github.com/\(repository.owner).png")!)
+        self.profilePicture.image = UIImage(data: data!)
     }
 
     func formatDate(date: String) -> Int {
