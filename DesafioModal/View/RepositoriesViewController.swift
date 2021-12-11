@@ -63,6 +63,20 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
         self.viewModel.showDetailsOfRepository(repository)
     }
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+
+        if offsetY > contentHeight - scrollView.frame.height {
+            if !viewModel.hasScrollReachedBottom {
+                viewModel.hasScrollReachedBottom = true
+
+                viewModel.page += 1
+                viewModel.search()
+            }
+        }
+    }
+
     private func applyStylingToButtons() throws {
         let buttons: [UIButton] = [filterSortButton, filterOrderButton]
 
@@ -111,7 +125,10 @@ class RepositoriesViewController: UIViewController, UITableViewDelegate, UITable
             .disposed(by: disposeBag)
 
         viewModel.didSearchEnded
-            .subscribe(onNext: { [weak self] in self?.tableView.reloadData() })
+            .subscribe(onNext: { [weak self] in
+                self?.tableView.reloadData()
+                self?.viewModel.hasScrollReachedBottom = false
+            })
             .disposed(by: disposeBag)
 
         filterButton.rx.tap

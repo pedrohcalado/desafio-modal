@@ -10,6 +10,10 @@ class RepositoriesViewModel {
 
     let searchQuery = BehaviorSubject(value: "")
     var repositories: [Repository] = []
+    var page = 1
+
+    var hasScrollReachedBottom = false
+    private var fetching = false
 
     let didSearchEnded = PublishSubject<Void>()
     let didRepositoryCellTapped = PublishSubject<Repository>()
@@ -24,6 +28,10 @@ class RepositoriesViewModel {
     }
 
     func search() {
+        if fetching {
+            return
+        }
+
         guard var query = try? searchQuery.value() else {
             return
         }
@@ -32,16 +40,20 @@ class RepositoriesViewModel {
             query = "language:swift"
         }
 
-        githubService.searchRepositories(query: query, sorting: FilterService.shared.sorting, order: FilterService.shared.order) { [weak self] result in
+        fetching = true
+
+        githubService.searchRepositories(query: query, sorting: FilterService.shared.sorting, order: FilterService.shared.order, page: page) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.repositories = response.repositories
+                self?.repositories += response.repositories
                 self?.didSearchEnded.onNext(())
 
             default:
-                self?.repositories = []
+                self?.repositories += []
 
             }
+
+            self?.fetching = false
         }
     }
 
